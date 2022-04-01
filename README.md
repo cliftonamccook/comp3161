@@ -1,2 +1,2 @@
-# comp3161
-Database Management System
+# COMP3161 Final Project
+
