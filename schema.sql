@@ -43,15 +43,15 @@ CREATE TABLE Publisher(
 CREATE TABLE Member_Phone(
     memberId INTEGER(12) NOT NULL,
     phone VARCHAR(10),
-    FOREIGN KEY memberId REFERENCES Member(memberId),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
     PRIMARY KEY(memberId,phone)
 );
 
 CREATE TABLE Writes(
     ISBN INTEGER(13) NOT NULL,
     authorId VARCHAR(255),
-    FOREIGN KEY ISBN REFERENCES Book(ISBN),
-    FOREIGN KEY authorId REFERENCES Author(authorId),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (authorId) REFERENCES Author(authorId),
     PRIMARY KEY(ISBN,authorId)
 );
 
@@ -91,7 +91,7 @@ CREATE TABLE Fine(
     fineDate DATE,
     amount DECIMAL(10,2),
     breach VARCHAR(255)
-    FOREIGN KEY memberId REFERENCES Member(memberId),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
     PRIMARY KEY(fineNumber)
 );
 
@@ -100,8 +100,8 @@ CREATE TABLE Subscribes(
     libraryId INTEGER(12) NOT NULL,
     joinDate DATE,
     expireDate DATE,
-    FOREIGN KEY memberId REFERENCES Member(memberId),
-    FOREIGN KEY libraryId REFERENCES Library(libraryId),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
+    FOREIGN KEY (libraryId) REFERENCES Library(libraryId),
     PRIMARY KEY(memberId,libraryId)
 );
 
@@ -110,8 +110,8 @@ CREATE TABLE Owns(
     ISBN INTEGER(13) NOT NULL,
     dateAcquired DATE,
     copies INTEGER(10),
-    FOREIGN KEY ISBN REFERENCES Book(ISBN),
-    FOREIGN KEY libraryId REFERENCES Library(libraryId),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (libraryId) REFERENCES Library(libraryId),
     PRIMARY KEY(libraryId,ISBN)
 );
 
@@ -119,8 +119,8 @@ CREATE TABLE Publishes(
     publisherId INTEGER(12) NOT NULL,
     ISBN INTEGER(13) NOT NULL,
     publicationDate DATE,
-    FOREIGN KEY ISBN REFERENCES Book(ISBN),
-    FOREIGN KEY publisherId REFERENCES Publisher(publisherId),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (publisherId) REFERENCES Publisher(publisherId),
     PRIMARY KEY(publisherId,ISBN)
 );
 
@@ -129,7 +129,7 @@ CREATE TABLE Borrows(
     ISBN INTEGER(13) NOT NULL,
     loanDate DATE,
     returnDate DATE,
-    FOREIGN KEY ISBN REFERENCES Book(ISBN),
-    FOREIGN KEY memberId REFERENCES Member(memberId),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
     PRIMARY KEY(memberId,ISBN)
 );
