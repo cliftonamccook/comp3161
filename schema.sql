@@ -71,7 +71,7 @@ CREATE TABLE NonFiction
 
 CREATE TABLE Fiction_fictionGenre
 (
-  fictionGenre INT NOT NULL,
+  fictionGenre VARCHAR(255) NOT NULL,
   ISBN INTEGER(13) NOT NULL,
   PRIMARY KEY (fictionGenre, ISBN),
   FOREIGN KEY (ISBN) REFERENCES Fiction(ISBN)
@@ -79,7 +79,7 @@ CREATE TABLE Fiction_fictionGenre
 
 CREATE TABLE NonFiction_nonFictionGenre
 (
-  nonFictionGenre INT NOT NULL,
+  nonFictionGenre VARCHAR(255) NOT NULL,
   ISBN INTEGER(13) NOT NULL,
   PRIMARY KEY (nonFictionGenre, ISBN),
   FOREIGN KEY (ISBN) REFERENCES NonFiction(ISBN)
