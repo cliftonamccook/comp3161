@@ -1,87 +1,135 @@
-CREATE Table Book(
-    ISBN int Primary Key, 
-    bookTitle varchar,
-    pages int,
-    edition varchar
+CREATE DATABASE booksystem;
+
+USE booksystem;
+
+CREATE TABLE Book(
+    ISBN INTEGER(13) NOT NULL,
+    bookTitle VARCHAR(255),
+    pages INTEGER(10),
+    edition VARCHAR(10),
+    PRIMARY KEY(ISBN)
 );
 
 CREATE TABLE Author(
-    authorId int Primary Key,
-    authorFname char,
-    authorLname char
+    authorId INTEGER(12) NOT NULL,
+    authorFname VARCHAR(255),
+    authorLname VARCHAR(255),
+    PRIMARY KEY(authorId)
 );
 
-CREATE TABLE Library (
-    libraryId varchar Primary Key,
-    libraryName char,
-    town char
+CREATE TABLE Library(
+    libraryId INTEGER(12) NOT NULL,
+    libraryName VARCHAR(255),
+    town VARCHAR(255),
+    PRIMARY KEY(libraryId)
 );
 
 CREATE TABLE Member(
-    memberId varchar Primary Key,
-    memberFname char,
-    memberLname char,
-    email varchar
+    memberId INTEGER(12) NOT NULL,
+    memberFname VARCHAR(255),
+    memberLname VARCHAR(255),
+    email VARCHAR(255),
+    PRIMARY KEY(memberId)
 );
 
-CREATE TABLE Member_Phone (
-    memberId int FOREIGN Key REFERENCES Member(memberId),
-    phone int
+CREATE TABLE Publisher(
+    publisherId INTEGER(12) NOT NULL,
+    publisherName VARCHAR(255),
+    city VARCHAR(255),
+    country VARCHAR(255),
+    PRIMARY KEY(publisherId)
 );
 
-CREATE TABLE Publisher (
-    publisherId varchar Primary Key,
-    publisherName char,
-    city char,
-    country char
+CREATE TABLE Member_Phone(
+    memberId INTEGER(12) NOT NULL,
+    phone VARCHAR(10),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
+    PRIMARY KEY(memberId,phone)
 );
 
-CREATE TABLE Fiction (
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    fictionGenre char
+CREATE TABLE Writes(
+    ISBN INTEGER(13) NOT NULL,
+    authorId INTEGER(12),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (authorId) REFERENCES Author(authorId),
+    PRIMARY KEY(ISBN,authorId)
 );
 
-CREATE TABLE NonFiction(
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    noneFictionGenre char
+CREATE TABLE Fiction
+(
+  ISBN INTEGER(13) NOT NULL,
+  PRIMARY KEY (ISBN),
+  FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
 );
 
-CREATE TABLE Writes (
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    authorId int FOREIGN Key REFERENCES Author(authorId)
+CREATE TABLE NonFiction
+(
+  ISBN INTEGER(13) NOT NULL,
+  PRIMARY KEY (ISBN),
+  FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
+);
+
+CREATE TABLE Fiction_fictionGenre
+(
+  fictionGenre VARCHAR(255) NOT NULL,
+  ISBN INTEGER(13) NOT NULL,
+  PRIMARY KEY (fictionGenre, ISBN),
+  FOREIGN KEY (ISBN) REFERENCES Fiction(ISBN)
+);
+
+CREATE TABLE NonFiction_nonFictionGenre
+(
+  nonFictionGenre VARCHAR(255) NOT NULL,
+  ISBN INTEGER(13) NOT NULL,
+  PRIMARY KEY (nonFictionGenre, ISBN),
+  FOREIGN KEY (ISBN) REFERENCES NonFiction(ISBN)
 );
 
 CREATE TABLE Fine(
-    memberId int FOREIGN Key REFERENCES Member(memberId),
-    fineNumber int FOREIGN Key REFERENCES Fine(fineNumber),
-    fineDate varchar,
-    amount int,
-    breach varchar
+    memberId INTEGER(12) NOT NULL,
+    fineNumber INTEGER(10) NOT NULL,
+    fineDate DATE,
+    amount DECIMAL(10,2),
+    breach VARCHAR(255),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
+    PRIMARY KEY(fineNumber)
 );
 
-CREATE TABLE Subscribes (
-    memberId int FOREIGN Key REFERENCES Member(memberId),
-    libraryId int FOREIGN Key REFERENCES Library(libraryId),
-    joinDate varchar,
-    expireDate varchar
+CREATE TABLE Subscribes(
+    memberId INTEGER(12) NOT NULL,
+    libraryId INTEGER(12) NOT NULL,
+    joinDate DATE,
+    expireDate DATE,
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
+    FOREIGN KEY (libraryId) REFERENCES Library(libraryId),
+    PRIMARY KEY(memberId,libraryId)
 );
 
 CREATE TABLE Owns(
-    libraryId int FOREIGN Key REFERENCES Library(libraryId),
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    dateAcquired varchar,
-    copies int
+    libraryId INTEGER(12) NOT NULL,
+    ISBN INTEGER(13) NOT NULL,
+    dateAcquired DATE,
+    copies INTEGER(10),
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (libraryId) REFERENCES Library(libraryId),
+    PRIMARY KEY(libraryId,ISBN)
 );
 
-CREATE TABLE Publishes (
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    publisherId int FOREIGN Key REFERENCES Publisher(publisherId),
-    publisherDate varchar
+CREATE TABLE Publishes(
+    publisherId INTEGER(12) NOT NULL,
+    ISBN INTEGER(13) NOT NULL,
+    publicationDate DATE,
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (publisherId) REFERENCES Publisher(publisherId),
+    PRIMARY KEY(publisherId,ISBN)
 );
 
 CREATE TABLE Borrows(
-    memberId int FOREIGN Key REFERENCES Member(memberId),
-    ISBN int FOREIGN Key REFERENCES Book(ISBN),
-    loanDate varchar,
-    returnDate varchar
+    memberId INTEGER(12) NOT NULL,
+    ISBN INTEGER(13) NOT NULL,
+    loanDate DATE,
+    returnDate DATE,
+    FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
+    FOREIGN KEY (memberId) REFERENCES Member(memberId),
+    PRIMARY KEY(memberId,ISBN)
 );
