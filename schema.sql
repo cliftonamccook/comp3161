@@ -21,7 +21,7 @@ CREATE TABLE Library(
     libraryId INTEGER(12) NOT NULL,
     libraryName VARCHAR(255),
     town VARCHAR(255),
-    PRIMARY KEY(authorId)
+    PRIMARY KEY(libraryId)
 );
 
 CREATE TABLE Member(
@@ -49,7 +49,7 @@ CREATE TABLE Member_Phone(
 
 CREATE TABLE Writes(
     ISBN INTEGER(13) NOT NULL,
-    authorId VARCHAR(255),
+    authorId INTEGER(12),
     FOREIGN KEY (ISBN) REFERENCES Book(ISBN),
     FOREIGN KEY (authorId) REFERENCES Author(authorId),
     PRIMARY KEY(ISBN,authorId)
@@ -90,7 +90,7 @@ CREATE TABLE Fine(
     fineNumber INTEGER(10) NOT NULL,
     fineDate DATE,
     amount DECIMAL(10,2),
-    breach VARCHAR(255)
+    breach VARCHAR(255),
     FOREIGN KEY (memberId) REFERENCES Member(memberId),
     PRIMARY KEY(fineNumber)
 );
