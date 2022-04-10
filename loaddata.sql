@@ -1,51 +1,71 @@
 INSERT INTO Book(ISBN, bookTitle, pages, edition)
 VALUES
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?)
-(?,?,?,?);
+(439785960,"Harry Potter and the Half-Blood Prince",652,6),
+(439358078,"Harry Potter and the Order of the Phoenix",870,5),
+(439554896,"Harry Potter and the Chamber of Secrets",352,2),
+(385732546,"The Power of One",291,1),
+(802415318,"The 5 Love Languages / The 5 Love Languages Journal",381,1);
+(672326728,"PHP and MySQL Web Development",1008,1),
+(330485385,"The Lovely Bones",328,1),
+(1599869942,"My Inventions",88,1),
+(321430840,"HTML  XHTML  and CSS (Visual Quickstart Guide)",456,1),
+(465067093,"The Psychology of Everyday Things",257,1),
+(60887966,"The Alchemist",192,1),
+(142000671,"Of Mice and Men",103,1),
+(451205367,"The Richest Man in Babylon",194,1),
+(471743674,"The Warren Buffett Way",245,1),
+(140280197,"The 48 Laws of Power",452,1),
+(374525749,"The Odyssey",515,1),
+(130158852,"Object-Oriented Programming in C++",640,1),
+(671708635,"The Seven Habits of Highly Effective People",368,1),
+(1591164419,"Bleach  Volume 01",200,1),
+(763628107,"The Dragon's Eye",221,1)
 
 INSERT INTO Author(authorId, authorFname, authorLname)
 VALUES
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?);
+(2657,"J.K.","Rowling"),
+(2657,"J.K.","Rowling"),
+(2657,"J.K.","Rowling"),
+(2968,"Bryce","Courtenay"),
+(4523,"Gary","Chapman");
+(5456,"Luke/Laura","Welling/Thomson"),
+(7154,"Alice","Sebold"),
+(3450,"Nikola","Tesla"),
+(3348,"Elizabeth","Castro"),
+(6971,"Donald A.","Norman"),
+(2429,"Paulo/Alan R./James Noel","Coelho/Clarke/Smith"),
+(7637,"John","Steinbeck"),
+(3493,"George S.","Clason"),
+(7268,"Robert G./Bill/Kenneth L.","Hagstrom/Miller/Fisher"),
+(5401,"Robert/Joost","Greene/Elffers"),
+(3597,"Homer/Robert /D.S.","Fitzgerald/Carne-Ross"),
+(5029,"Richard /Martin","Johnsonbaugh/Kalin"),
+(1680,"Stephen R.","Covey"),
+(7985,"Tite","Kubo"),
+(7627,"Dugald A./Douglas","Steer/Carrel")
 
 INSERT INTO Library(libraryId, libraryName, town)
 VALUES
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?);
+(?,?,"Bar Harbor"),
+(?,?,"Telluride"),
+(?,?,"Jackson Hole"),
+(?,?,"Lake Tahoe"),
+(?,?,"Sedona"),
+(?,?,"St. Augustine"),
+(?,?,"Moab"),
+(?,?,"Steamboat Springs"),
+(?,?,"Cannon Beach"),
+(?,?,"Sonoma");
+(?,?,"Monterey");
+(?,?,"Breckenridge");
+(?,?,"Taos, NM");
+(?,?,"Williamsburg");
+(?,?,"Gatlinburg");
+(?,?,"Helen");
+(?,?,"Martha's Vineyard");
+(?,?,"Stowe, VT");
+(?,?,"Sanibel Island");
+(?,?,"Sun Valley");
 
 INSERT INTO Member(memberId, memberFname, memberLname, email)
 VALUES
@@ -62,11 +82,10 @@ VALUES
 
 INSERT INTO Publisher(publisherId, publisherName, city, country)
 VALUES
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
+(?,Scholastic Inc.,?,?),
+(?,Scholastic Inc.,?,?),
+(?,Scholastic Inc.,?,?),
+(?,Delacorte Books for Young Readers,?,?),
 (?,?,?,?),
 (?,?,?,?),
 (?,?,?,?),
@@ -212,11 +231,10 @@ VALUES
 
 INSERT INTO Publishes(publisherId, ISBN, publicationDate)
 VALUES
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
+(?,?,9/16/2006),
+(?,?,9/1/2004),
+(?,?,11/1/2003),
+(?,?,9/13/2005),
 (?,?,?),
 (?,?,?),
 (?,?,?),
