@@ -4,7 +4,7 @@ VALUES
 (439358078,"Harry Potter and the Order of the Phoenix",870,5),
 (439554896,"Harry Potter and the Chamber of Secrets",352,2),
 (385732546,"The Power of One",291,1),
-(802415318,"The 5 Love Languages / The 5 Love Languages Journal",381,1);
+(802415318,"The 5 Love Languages / The 5 Love Languages Journal",381,1),
 (672326728,"PHP and MySQL Web Development",1008,1),
 (330485385,"The Lovely Bones",328,1),
 (1599869942,"My Inventions",88,1),
@@ -19,103 +19,111 @@ VALUES
 (130158852,"Object-Oriented Programming in C++",640,1),
 (671708635,"The Seven Habits of Highly Effective People",368,1),
 (1591164419,"Bleach  Volume 01",200,1),
-(763628107,"The Dragon's Eye",221,1)
+(763628107,"The Dragon's Eye",221,1);
 
 INSERT INTO Author(authorId, authorFname, authorLname)
 VALUES
 (2657,"J.K.","Rowling"),
-(2657,"J.K.","Rowling"),
-(2657,"J.K.","Rowling"),
 (2968,"Bryce","Courtenay"),
-(4523,"Gary","Chapman");
-(5456,"Luke/Laura","Welling/Thomson"),
+(4523,"Gary","Chapman"),
+(5456,"Luke","Welling"),
+(5457,"Laura", "Thomason"),
 (7154,"Alice","Sebold"),
 (3450,"Nikola","Tesla"),
 (3348,"Elizabeth","Castro"),
 (6971,"Donald A.","Norman"),
-(2429,"Paulo/Alan R./James Noel","Coelho/Clarke/Smith"),
+(2429,"Paulo","Coelho"),
+(2430,"Alan R.", "Clarke"),
+(2435,"James Noel", "Smith"),
 (7637,"John","Steinbeck"),
 (3493,"George S.","Clason"),
-(7268,"Robert G./Bill/Kenneth L.","Hagstrom/Miller/Fisher"),
-(5401,"Robert/Joost","Greene/Elffers"),
-(3597,"Homer/Robert /D.S.","Fitzgerald/Carne-Ross"),
-(5029,"Richard /Martin","Johnsonbaugh/Kalin"),
+(7268,"Robert G.","Hagstrom"),
+(7271,"Bill", "Miller"),
+(7275,"Kenneth L.", "Fisher"),
+(5401,"Robert","Greene"),
+(5431,"Joost","Elffers"),
+(3597,"Homer","Fitzgerald"),
+(3600,"Robert","Carne-Ross"),
+(5029,"Richard","Johnsonbaugh"),
+(5031,"Martin","Kalin"),
 (1680,"Stephen R.","Covey"),
 (7985,"Tite","Kubo"),
-(7627,"Dugald A./Douglas","Steer/Carrel")
+(7627,"Dugald A.","Steer"),
+(7631,"Douglas","Carrel");
+
 
 INSERT INTO Library(libraryId, libraryName, city)
 VALUES
-(LD0001,"ANCHOR POINT PUBLIC LIBRARY","ANCHOR POINT"),
-(LD0002,"ANCHORAGE PUBLIC LIBRARY","ANCHORAGE"),
-(LD0003,"ANDERSON VILLAGE LIBRARY","ANDERSON"),
-(LD0004,"KUSKOKWIM CONSORTIUM LIBRARY","BETHEL"),
-(LD0005,"BIG LAKE PUBLIC LIBRARY","BIG LAKE"),
-(LD0006,"CANTWELL COMMUNITY LIBRARY","CANTWELL"),
-(LD0007,"CHINIAK PUBLIC LIBRARY","CHINIAK"),
-(LD0008,"COLD BAY PUBLIC LIBRARY","COLD BAY"),
-(LD0009,"COOPER LANDING COMMUNITY LIBRARY","COOPER LANDING"),
-(LD0010,"CORDOVA PUBLIC LIBRARY","CORDOVA"),
-(LD0011,"CRAIG PUBLIC LIBRARY","CRAIG"),
-(LD0012,"IPNATCHIAQ LIBRARY","DEERING"),
-(LD0013,"DELTA COMMUNITY LIBRARY","DELTA JUNCTION"),
-(LD0014,"DILLINGHAM PUBLIC LIBRARY","DILLINGHAM"),
-(LD0015,"EAGLE PUBLIC LIBRARY","EAGLE"),
-(LD0016,"FAIRBANKS NORTH STAR BOROUGH PUBLIC LIBRARIES","FAIRBANKS"),
-(LD0017,"CHARLES EVANS COMMUNITY/SCHOOL LIBRARY","GALENA"),
-(LD0018,"COPPER VALLEY COMMUNITY LIBRARY","GLENNALLEN"),
-(LD0019,"GUSTAVUS PUBLIC LIBRARY","GUSTAVUS"),
-(LD0020,"HAINES BOROUGH PUBLIC LIBRARY","HAINES"),
+(0001,"ANCHOR POINT PUBLIC LIBRARY","ANCHOR POINT"),
+(0002,"ANCHORAGE PUBLIC LIBRARY","ANCHORAGE"),
+(0003,"ANDERSON VILLAGE LIBRARY","ANDERSON"),
+(0004,"KUSKOKWIM CONSORTIUM LIBRARY","BETHEL"),
+(0005,"BIG LAKE PUBLIC LIBRARY","BIG LAKE"),
+(0006,"CANTWELL COMMUNITY LIBRARY","CANTWELL"),
+(0007,"CHINIAK PUBLIC LIBRARY","CHINIAK"),
+(0008,"COLD BAY PUBLIC LIBRARY","COLD BAY"),
+(0009,"COOPER LANDING COMMUNITY LIBRARY","COOPER LANDING"),
+(0010,"CORDOVA PUBLIC LIBRARY","CORDOVA"),
+(0011,"CRAIG PUBLIC LIBRARY","CRAIG"),
+(0012,"IPNATCHIAQ LIBRARY","DEERING"),
+(0013,"DELTA COMMUNITY LIBRARY","DELTA JUNCTION"),
+(0014,"DILLINGHAM PUBLIC LIBRARY","DILLINGHAM"),
+(0015,"EAGLE PUBLIC LIBRARY","EAGLE"),
+(0016,"FAIRBANKS NORTH STAR BOROUGH PUBLIC LIBRARIES","FAIRBANKS"),
+(0017,"CHARLES EVANS COMMUNITY/SCHOOL LIBRARY","GALENA"),
+(0018,"COPPER VALLEY COMMUNITY LIBRARY","GLENNALLEN"),
+(0019,"GUSTAVUS PUBLIC LIBRARY","GUSTAVUS"),
+(0020,"HAINES BOROUGH PUBLIC LIBRARY","HAINES");
 
 
 INSERT INTO Member(memberId, memberFname, memberLname, email)
 VALUES
-(220806,?,?,?),
-(756407,?,?,?),
-(920467,?,?,?),
-(915201,?,?,?),
-(933082,?,?,?),
-(292665,?,?,?),
-(914064,?,?,?),
-(490213,?,?,?),
-(971968,?,?,?),
-(442411,?,?,?);
+(220806,"Myles", "Mendez", "myles_menz@gmail.com"),
+(756407, "Jaelyn", "Ross", "jaelyn_ros@gmail.com"),
+(920467, "Jonas", "Sawyer", "jonas_saw@hotmail.com"),
+(915201, "Harry", "Hodge", "harry_H@outlook.com"),
+(933082, "Elyse", "Kane", "elyse2Kane@gmail.com"),
+(292665, "Regina", "Cisneros", "reginnarCiseros@outlook.com"),
+(914064, "Davin", "Lam", "Davin_lam52@gmail.com"),
+(490213, "Vivian", "Graham", "vivianGraham_13@hotmail.com"),
+(971968, "Maritza", "Gill", "maritza0Gill@gmail.com"),
+(442411, "Virginia", "Holmes", "Holmes1998@gmail.com");
 
 INSERT INTO Publisher(publisherId, publisherName, city, country)
 VALUES
-(,"Scholastic Inc.",?,?),
-(,"Scholastic Inc.",?,?),
-(,"Scholastic Inc.",?,?),
-(,"Delacorte Books for Young Readers",?,?),
-(,"Moody Publishers",?,?),
-(,"Sams",?,?),
-(,"Picador",?,?),
-(,"Filiquarian Publishing LLC.",?,?),
-(,"Peachpit Press",?,?);
-(,"Basic Books",?,?);
-(,"HarperOne",?,?);
-(,"Penguin Books",?,?);
-(,"Berkley Books",?,?);
-(,"John Wiley & Sons",?,?);
-(,"Penguin (Business)",?,?);
-(,"Farrar  Straus and Giroux",?,?);
-(,"Prentice Hall",?,?);
-(,"Free Press",?,?);
-(,"VIZ Media LLC",?,?);
-(,"Candlewick Press",?,?);
+(101,"Scholastic Inc.",?,?),
+(102,"Scholastic Inc.",?,?),
+(103,"Scholastic Inc.",?,?),
+(104,"Delacorte Books for Young Readers",?,?),
+(105,"Moody Publishers",?,?),
+(106,"Sams",?,?),
+(107,"Picador",?,?),
+(108,"Filiquarian Publishing LLC.",?,?),
+(109,"Peachpit Press",?,?),
+(110,"Basic Books",?,?),
+(111,"HarperOne",?,?),
+(112,"Penguin Books",?,?),
+(113,"Berkley Books",?,?);
+(114,"John Wiley & Sons",?,?),
+(115,"Penguin (Business)",?,?),
+(116,"Farrar  Straus and Giroux",?,?),
+(117,"Prentice Hall",?,?),
+(118,"Free Press",?,?),
+(119,"VIZ Media LLC",?,?),
+(120,"Candlewick Press",?,?);
 
 INSERT INTO Member_Phone(memberId, phone)
 VALUES
-(220806,18765588649),
-(756407,18764245997),
-(920467,18761990166),
-(915201,18762631068),
-(933082,18767881668),
-(292665,18765012944),
-(914064,18769187544),
-(490213,18762713126),
-(971968,18761147653),
-(442411,18769614767);
+(220806,8765588649),
+(756407,8764245997),
+(920467,8761990166),
+(915201,8762631068),
+(933082,8767881668),
+(292665,8765012944),
+(914064,8769187544),
+(490213,8762713126),
+(971968,8761147653),
+(442411,8769614767);
 
 INSERT INTO Writes(ISBN, authorId)
 VALUES
