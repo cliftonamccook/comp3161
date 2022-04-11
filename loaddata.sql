@@ -44,66 +44,78 @@ VALUES
 (7985,"Tite","Kubo"),
 (7627,"Dugald A./Douglas","Steer/Carrel")
 
-INSERT INTO Library(libraryId, libraryName, town)
+INSERT INTO Library(libraryId, libraryName, city)
 VALUES
-(?,?,"Bar Harbor"),
-(?,?,"Telluride"),
-(?,?,"Jackson Hole"),
-(?,?,"Lake Tahoe"),
-(?,?,"Sedona"),
-(?,?,"St. Augustine"),
-(?,?,"Moab"),
-(?,?,"Steamboat Springs"),
-(?,?,"Cannon Beach"),
-(?,?,"Sonoma");
-(?,?,"Monterey");
-(?,?,"Breckenridge");
-(?,?,"Taos, NM");
-(?,?,"Williamsburg");
-(?,?,"Gatlinburg");
-(?,?,"Helen");
-(?,?,"Martha's Vineyard");
-(?,?,"Stowe, VT");
-(?,?,"Sanibel Island");
-(?,?,"Sun Valley");
+(LD0001,"ANCHOR POINT PUBLIC LIBRARY","ANCHOR POINT"),
+(LD0002,"ANCHORAGE PUBLIC LIBRARY","ANCHORAGE"),
+(LD0003,"ANDERSON VILLAGE LIBRARY","ANDERSON"),
+(LD0004,"KUSKOKWIM CONSORTIUM LIBRARY","BETHEL"),
+(LD0005,"BIG LAKE PUBLIC LIBRARY","BIG LAKE"),
+(LD0006,"CANTWELL COMMUNITY LIBRARY","CANTWELL"),
+(LD0007,"CHINIAK PUBLIC LIBRARY","CHINIAK"),
+(LD0008,"COLD BAY PUBLIC LIBRARY","COLD BAY"),
+(LD0009,"COOPER LANDING COMMUNITY LIBRARY","COOPER LANDING"),
+(LD0010,"CORDOVA PUBLIC LIBRARY","CORDOVA"),
+(LD0011,"CRAIG PUBLIC LIBRARY","CRAIG"),
+(LD0012,"IPNATCHIAQ LIBRARY","DEERING"),
+(LD0013,"DELTA COMMUNITY LIBRARY","DELTA JUNCTION"),
+(LD0014,"DILLINGHAM PUBLIC LIBRARY","DILLINGHAM"),
+(LD0015,"EAGLE PUBLIC LIBRARY","EAGLE"),
+(LD0016,"FAIRBANKS NORTH STAR BOROUGH PUBLIC LIBRARIES","FAIRBANKS"),
+(LD0017,"CHARLES EVANS COMMUNITY/SCHOOL LIBRARY","GALENA"),
+(LD0018,"COPPER VALLEY COMMUNITY LIBRARY","GLENNALLEN"),
+(LD0019,"GUSTAVUS PUBLIC LIBRARY","GUSTAVUS"),
+(LD0020,"HAINES BOROUGH PUBLIC LIBRARY","HAINES"),
+
 
 INSERT INTO Member(memberId, memberFname, memberLname, email)
 VALUES
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?);
+(220806,?,?,?),
+(756407,?,?,?),
+(920467,?,?,?),
+(915201,?,?,?),
+(933082,?,?,?),
+(292665,?,?,?),
+(914064,?,?,?),
+(490213,?,?,?),
+(971968,?,?,?),
+(442411,?,?,?);
 
 INSERT INTO Publisher(publisherId, publisherName, city, country)
 VALUES
-(?,Scholastic Inc.,?,?),
-(?,Scholastic Inc.,?,?),
-(?,Scholastic Inc.,?,?),
-(?,Delacorte Books for Young Readers,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?),
-(?,?,?,?);
+(,"Scholastic Inc.",?,?),
+(,"Scholastic Inc.",?,?),
+(,"Scholastic Inc.",?,?),
+(,"Delacorte Books for Young Readers",?,?),
+(,"Moody Publishers",?,?),
+(,"Sams",?,?),
+(,"Picador",?,?),
+(,"Filiquarian Publishing LLC.",?,?),
+(,"Peachpit Press",?,?);
+(,"Basic Books",?,?);
+(,"HarperOne",?,?);
+(,"Penguin Books",?,?);
+(,"Berkley Books",?,?);
+(,"John Wiley & Sons",?,?);
+(,"Penguin (Business)",?,?);
+(,"Farrar  Straus and Giroux",?,?);
+(,"Prentice Hall",?,?);
+(,"Free Press",?,?);
+(,"VIZ Media LLC",?,?);
+(,"Candlewick Press",?,?);
 
 INSERT INTO Member_Phone(memberId, phone)
 VALUES
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?),
-(?,?);
+(220806,18765588649),
+(756407,18764245997),
+(920467,18761990166),
+(915201,18762631068),
+(933082,18767881668),
+(292665,18765012944),
+(914064,18769187544),
+(490213,18762713126),
+(971968,18761147653),
+(442411,18769614767);
 
 INSERT INTO Writes(ISBN, authorId)
 VALUES
@@ -130,29 +142,29 @@ VALUES
 
 INSERT INTO Fiction(ISBN)
 VALUES
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?);
+(439785960),
+(439358078),
+(439554896),
+(385732546),
+(330485385),
+(60887966),
+(142000671),
+(374525749),
+(1591164419),
+(763628107);
 
 INSERT INTO NonFiction(ISBN)
 VALUES
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?),
-(?);
+(802415318),
+(672326728),
+(1599869942),
+(321430840),
+(465067093),
+(451205367),
+(471743674),
+(140280197),
+(130158852),
+(671708635);
 
 INSERT INTO Fiction_fictionGenre(fictionGenre, ISBN)
 VALUES
@@ -231,25 +243,26 @@ VALUES
 
 INSERT INTO Publishes(publisherId, ISBN, publicationDate)
 VALUES
-(?,?,9/16/2006),
-(?,?,9/1/2004),
-(?,?,11/1/2003),
-(?,?,9/13/2005),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?),
-(?,?,?);
+(?,439785960,9/16/2006),
+(?,439358078,9/1/2004),
+(?,439554896,11/1/2003),
+(?,385732546,9/13/2005),
+(?,802415318,1/1/2005),
+(?,672326728,10/1/2004),
+(?,330485385,6/1/2003),
+(?,1599869942,5/17/2006),
+(?,321430840,8/1/2006),
+(?,465067093,6/13/1988),
+(?,60887966,5/2/2006),
+(?,142000671,1/8/2002),
+(?,451205367,2/1/2008),
+(?,471743674,10/1/2005),
+(?,140280197,9/1/2000),
+(?,374525749,11/5/1998),
+(?,130158852,8/13/1999),
+(?,671708635,9/15/1990),
+(?,1591164419,5/19/2004);
+(?,763628107,11/14/2006);
 
 INSERT INTO Borrows(memberId, ISBN, loanDate, returnDate)
 VALUES

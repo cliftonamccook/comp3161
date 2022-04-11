@@ -20,7 +20,7 @@ CREATE TABLE Author(
 CREATE TABLE Library(
     libraryId INTEGER(12) NOT NULL,
     libraryName VARCHAR(255),
-    town VARCHAR(255),
+    city VARCHAR(255),
     PRIMARY KEY(libraryId)
 );
 
