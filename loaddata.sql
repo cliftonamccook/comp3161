@@ -178,29 +178,29 @@ VALUES
 
 INSERT INTO Fiction_fictionGenre(fictionGenre, ISBN)
 VALUES
-(?,439785960),
-(?,439358078),
-(?,439554896),
-(?,385732546),
-(?,330485385),
-(?,60887966),
-(?,142000671),
-(?,374525749),
-(?,1591164419),
-(?,763628107);
+("Fantasy",439785960),
+("Fantasy",439358078),
+("Fantasy",439554896),
+("Sports",385732546),
+("Supernatural thriller",330485385),
+("Fantasy",60887966),
+("Drama",142000671),
+("Epic poetry",374525749),
+("Shonen",1591164419),
+("Crime Fiction",763628107);
 
 INSERT INTO NonFiction_nonFictionGenre(nonFictionGenre, ISBN)
 VALUES
-(?,802415318),
-(?,672326728),
-(?,1599869942),
-(?,321430840),
-(?,465067093),
-(?,451205367),
-(?,471743674),
-(?,140280197),
-(?,130158852),
-(?,671708635);
+("Family & Relationships",802415318),
+("Education",672326728),
+("Autobiographies",1599869942),
+("Education",321430840),
+("Psychology",465067093),
+("Business",451205367),
+("Business",471743674),
+("Psychology",140280197),
+("Education",130158852),
+("Self-help",671708635);
 
 INSERT INTO Fine(memberId, fineNumber, fineDate, amount, breach)
 VALUES
