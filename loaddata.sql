@@ -91,9 +91,9 @@ VALUES
 
 INSERT INTO Publisher(publisherId, publisherName, city, country)
 VALUES
-(101,"Scholastic Inc.",?,?),
-(102,"Scholastic Inc.",?,?),
-(103,"Scholastic Inc.",?,?),
+(101,"Scholastic Inc.","New York","USA"),
+(102,"Scholastic Inc.","New York","USA"),
+(103,"Scholastic Inc.","New York","USA"),
 (104,"Delacorte Books for Young Readers",?,?),
 (105,"Moody Publishers",?,?),
 (106,"Sams",?,?),
