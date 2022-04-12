@@ -202,16 +202,16 @@ VALUES
 
 INSERT INTO Fine(memberId, fineNumber, fineDate, amount, breach)
 VALUES
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?),
-(?,?,?,?,?);
+(971968,107,02/02/2022,6,"Missed Return Date"),
+(442411,706,04/02/2022,30,"Badly Damaged Book"),
+(292665,253,06/02/2022,12,"Missed Return Date"),
+(220806,665,13/02/2022,29,"Badly Damaged Book"),
+(915201,678,17/02/2022,9,"Missed Return Date"),
+(220806,751,18/02/2022,5,"Missed Return Date"),
+(933082,536,22/02/2022,30,"Badly Damaged Book"),
+(490213,841,23/02/2022,25,"Badly Damaged Book"),
+(756407,363,25/02/2022,21,"Badly Damaged Book"),
+(914064,354,28/02/2022,19,"Damagaed Book");
 
 INSERT INTO Subscribes(memberId, libraryId, joinDate)
 VALUES
