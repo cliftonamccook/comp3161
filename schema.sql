@@ -1,3 +1,7 @@
+-- Run log when file execute
+-- tee schema.log
+
+DROP DATABASE booksystem;
 CREATE DATABASE booksystem;
 
 USE booksystem;
