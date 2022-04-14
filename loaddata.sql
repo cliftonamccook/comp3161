@@ -1,5 +1,6 @@
--- tee loaddata.log
+tee loaddata.log
 
+CREATE INDEX ISBN_INDEX ON Book(ISBN);
 INSERT INTO Book(ISBN, bookTitle, pages, edition)
 VALUES
 (439785960,"Harry Potter and the Half-Blood Prince", 652, 6),
@@ -24,9 +25,11 @@ VALUES
 (763628107,"The Dragon's Eye", 221, 1);
 
 SELECT * FROM Book;
+SHOW INDEX FROM Book;
 
 --
 
+CREATE INDEX AUTHOR_ID_INDEX ON Author(authorId);
 INSERT INTO Author(authorId, authorFname, authorLname)
 VALUES
 (2657, "J.K.", "Rowling"),
@@ -59,6 +62,8 @@ VALUES
 (7631, "Douglas", "Carrel");
 
 SELECT * FROM Author;
+SHOW INDEX FROM Author;
+
 
 --
 
@@ -89,6 +94,7 @@ SELECT * from Library;
 
 --
 
+CREATE INDEX MEMBER_ID_INDEX ON Member(memberId);
 INSERT INTO Member(memberId, memberFname, memberLname, email)
 VALUES
 (220806, "Myles", "Mendez", "myles_menz@gmail.com"),
@@ -103,9 +109,11 @@ VALUES
 (442411, "Virginia", "Holmes", "Holmes1998@gmail.com");
 
 SELECT * FROM Member;
+SHOW INDEX FROM Member;
 
 --
 
+CREATE INDEX PUBLISHER_ID_INDEX ON Publisher(publisherId);
 INSERT INTO Publisher(publisherId, publisherName, city, country)
 VALUES
 (101, "Scholastic Inc.", "New York", "USA"),
@@ -128,6 +136,7 @@ VALUES
 (120, "Candlewick Press", "Somerville", "USA");
 
 SELECT * FROM Publisher;
+SHOW INDEX FROM Publisher;
 
 --
 
