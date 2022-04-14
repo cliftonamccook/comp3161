@@ -1,7 +1,12 @@
+-- Run log when file execute
+-- tee schema.log
+
+DROP DATABASE booksystem;
 CREATE DATABASE booksystem;
 
 USE booksystem;
 
+DROP TABLE IF EXISTS Book;
 CREATE TABLE Book(
     ISBN INTEGER(13) NOT NULL,
     bookTitle VARCHAR(255),
@@ -10,6 +15,7 @@ CREATE TABLE Book(
     PRIMARY KEY(ISBN)
 );
 
+DROP TABLE IF EXISTS Author;
 CREATE TABLE Author(
     authorId INTEGER(12) NOT NULL,
     authorFname VARCHAR(255),
@@ -17,13 +23,15 @@ CREATE TABLE Author(
     PRIMARY KEY(authorId)
 );
 
+DROP TABLE IF EXISTS Library;
 CREATE TABLE Library(
     libraryId INTEGER(12) NOT NULL,
     libraryName VARCHAR(255),
-    town VARCHAR(255),
+    city VARCHAR(255),
     PRIMARY KEY(libraryId)
 );
 
+DROP TABLE IF EXISTS Member;
 CREATE TABLE Member(
     memberId INTEGER(12) NOT NULL,
     memberFname VARCHAR(255),
@@ -32,6 +40,7 @@ CREATE TABLE Member(
     PRIMARY KEY(memberId)
 );
 
+DROP TABLE IF EXISTS Publisher;
 CREATE TABLE Publisher(
     publisherId INTEGER(12) NOT NULL,
     publisherName VARCHAR(255),
@@ -40,6 +49,7 @@ CREATE TABLE Publisher(
     PRIMARY KEY(publisherId)
 );
 
+DROP TABLE IF EXISTS Member_Phone;
 CREATE TABLE Member_Phone(
     memberId INTEGER(12) NOT NULL,
     phone VARCHAR(10),
@@ -47,6 +57,7 @@ CREATE TABLE Member_Phone(
     PRIMARY KEY(memberId,phone)
 );
 
+DROP TABLE IF EXISTS Writes;
 CREATE TABLE Writes(
     ISBN INTEGER(13) NOT NULL,
     authorId INTEGER(12),
@@ -55,6 +66,7 @@ CREATE TABLE Writes(
     PRIMARY KEY(ISBN,authorId)
 );
 
+DROP TABLE IF EXISTS Fiction;
 CREATE TABLE Fiction
 (
   ISBN INTEGER(13) NOT NULL,
@@ -62,6 +74,7 @@ CREATE TABLE Fiction
   FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
 );
 
+DROP TABLE IF EXISTS NonFiction;
 CREATE TABLE NonFiction
 (
   ISBN INTEGER(13) NOT NULL,
@@ -69,6 +82,7 @@ CREATE TABLE NonFiction
   FOREIGN KEY (ISBN) REFERENCES Book(ISBN)
 );
 
+DROP TABLE IF EXISTS Fiction_fictionGenre;
 CREATE TABLE Fiction_fictionGenre
 (
   fictionGenre VARCHAR(255) NOT NULL,
@@ -77,6 +91,7 @@ CREATE TABLE Fiction_fictionGenre
   FOREIGN KEY (ISBN) REFERENCES Fiction(ISBN)
 );
 
+DROP TABLE IF EXISTS NonFiction_nonFictionGenre;
 CREATE TABLE NonFiction_nonFictionGenre
 (
   nonFictionGenre VARCHAR(255) NOT NULL,
@@ -85,6 +100,7 @@ CREATE TABLE NonFiction_nonFictionGenre
   FOREIGN KEY (ISBN) REFERENCES NonFiction(ISBN)
 );
 
+DROP TABLE IF EXISTS Fine;
 CREATE TABLE Fine(
     memberId INTEGER(12) NOT NULL,
     fineNumber INTEGER(10) NOT NULL,
@@ -95,6 +111,7 @@ CREATE TABLE Fine(
     PRIMARY KEY(fineNumber)
 );
 
+DROP TABLE IF EXISTS Subscribes;
 CREATE TABLE Subscribes(
     memberId INTEGER(12) NOT NULL,
     libraryId INTEGER(12) NOT NULL,
@@ -105,6 +122,7 @@ CREATE TABLE Subscribes(
     PRIMARY KEY(memberId,libraryId)
 );
 
+DROP TABLE IF EXISTS Owns;
 CREATE TABLE Owns(
     libraryId INTEGER(12) NOT NULL,
     ISBN INTEGER(13) NOT NULL,
@@ -115,6 +133,7 @@ CREATE TABLE Owns(
     PRIMARY KEY(libraryId,ISBN)
 );
 
+DROP TABLE IF EXISTS Publishes;
 CREATE TABLE Publishes(
     publisherId INTEGER(12) NOT NULL,
     ISBN INTEGER(13) NOT NULL,
@@ -124,6 +143,7 @@ CREATE TABLE Publishes(
     PRIMARY KEY(publisherId,ISBN)
 );
 
+DROP TABLE IF EXISTS Borrows;
 CREATE TABLE Borrows(
     memberId INTEGER(12) NOT NULL,
     ISBN INTEGER(13) NOT NULL,
