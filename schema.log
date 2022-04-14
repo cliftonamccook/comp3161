@@ -1,42 +1,73 @@
-mysql> source schema.sql
-Query OK, 1 row affected (0.17 sec)
+Query OK, 18 rows affected (2.708 sec)
+
+Query OK, 1 row affected (0.001 sec)
 
 Database changed
-Query OK, 0 rows affected, 2 warnings (0.45 sec)
+Query OK, 0 rows affected, 1 warning (0.523 sec)
 
-Query OK, 0 rows affected, 1 warning (1.08 sec)
+Query OK, 0 rows affected (0.202 sec)
 
-Query OK, 0 rows affected, 1 warning (1.10 sec)
+Query OK, 0 rows affected, 1 warning (0.017 sec)
 
-Query OK, 0 rows affected, 1 warning (0.61 sec)
+Query OK, 0 rows affected (0.184 sec)
 
-Query OK, 0 rows affected, 1 warning (0.46 sec)
+Query OK, 0 rows affected, 1 warning (0.016 sec)
 
-Query OK, 0 rows affected, 1 warning (0.65 sec)
+Query OK, 0 rows affected (0.169 sec)
 
-Query OK, 0 rows affected, 2 warnings (0.96 sec)
+Query OK, 0 rows affected, 1 warning (0.017 sec)
 
-Query OK, 0 rows affected, 1 warning (0.53 sec)
+Query OK, 0 rows affected (0.260 sec)
 
-Query OK, 0 rows affected, 1 warning (0.53 sec)
+Query OK, 0 rows affected, 1 warning (0.016 sec)
 
-Query OK, 0 rows affected, 1 warning (0.81 sec)
+Query OK, 0 rows affected (1.318 sec)
 
-Query OK, 0 rows affected, 1 warning (0.79 sec)
+Query OK, 0 rows affected, 1 warning (0.125 sec)
 
-Query OK, 0 rows affected, 2 warnings (0.60 sec)
+Query OK, 0 rows affected (0.980 sec)
 
-Query OK, 0 rows affected, 2 warnings (0.64 sec)
+Query OK, 0 rows affected, 1 warning (0.016 sec)
 
-Query OK, 0 rows affected, 3 warnings (0.72 sec)
+Query OK, 0 rows affected (0.260 sec)
 
-Query OK, 0 rows affected, 2 warnings (0.70 sec)
+Query OK, 0 rows affected, 1 warning (0.033 sec)
 
-Query OK, 0 rows affected, 2 warnings (0.64 sec)
+Query OK, 0 rows affected (0.934 sec)
 
-mysql> use booksystem;
+Query OK, 0 rows affected, 1 warning (0.017 sec)
+
+Query OK, 0 rows affected (0.209 sec)
+
+Query OK, 0 rows affected, 1 warning (0.017 sec)
+
+Query OK, 0 rows affected (0.374 sec)
+
+Query OK, 0 rows affected, 1 warning (0.017 sec)
+
+Query OK, 0 rows affected (0.335 sec)
+
+Query OK, 0 rows affected, 1 warning (0.016 sec)
+
+Query OK, 0 rows affected (1.003 sec)
+
+Query OK, 0 rows affected, 1 warning (0.016 sec)
+
+Query OK, 0 rows affected (0.281 sec)
+
+Query OK, 0 rows affected, 1 warning (0.017 sec)
+
+Query OK, 0 rows affected (0.323 sec)
+
+Query OK, 0 rows affected, 1 warning (0.016 sec)
+
+Query OK, 0 rows affected (0.313 sec)
+
+Query OK, 0 rows affected, 1 warning (0.016 sec)
+
+Query OK, 0 rows affected (1.048 sec)
+
 Database changed
-mysql> show tables;
 +----------------------------+
 | Tables_in_booksystem       |
 +----------------------------+
@@ -57,9 +88,7 @@ mysql> show tables;
 | Subscribes                 |
 | Writes                     |
 +----------------------------+
-16 rows in set (0.00 sec)
+16 rows in set (0.001 sec)
 
-mysql> drop database booksystem;
-Query OK, 16 rows affected (4.83 sec)
-
-mysql> quit;
+MariaDB [booksystem]> Ctrl-C -- exit!
+Aborted
