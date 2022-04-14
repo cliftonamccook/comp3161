@@ -1,0 +1,45 @@
+Query OK, 0 rows affected (0.043 sec)
+
++------------------------------------------------+-----------------------------+
+| bookTitle                                      | publisherName               |
++------------------------------------------------+-----------------------------+
+| Harry Potter and the Half-Blood Prince         | Scholastic Inc.             |
+| My Inventions                                  | Filiquarian Publishing LLC. |
+| HTML  XHTML  and CSS (Visual Quickstart Guide) | Peachpit Press              |
+| The Psychology of Everyday Things              | Basic Books                 |
+| The Alchemist                                  | HarperOne                   |
+| The Richest Man in Babylon                     | Berkley Books               |
+| The Dragon's Eye                               | Candlewick Press            |
++------------------------------------------------+-----------------------------+
+7 rows in set (0.001 sec)
+
++------------------+------------+
+| member_full_name | phone      |
++------------------+------------+
+| Davin Lam        | 8769187544 |
+| Jaelyn Ross      | 8764245997 |
+| Harry Hodge      | 8762631068 |
+| Vivian Graham    | 8762713126 |
+| Virginia Holmes  | 8769614767 |
+| Elyse Kane       | 8767881668 |
+| Regina Cisneros  | 8765012944 |
+| Jonas Sawyer     | 8761990166 |
+| Myles Mendez     | 8765588649 |
+| Maritza Gill     | 8761147653 |
++------------------+------------+
+10 rows in set (0.001 sec)
+
+Query OK, 0 rows affected (0.031 sec)
+
++-------------+-------------+
+| authorFname | authorLname |
++-------------+-------------+
+| J.K.        | Rowling     |
++-------------+-------------+
+1 row in set (0.000 sec)
+
+Query OK, 1 row affected (0.016 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 4 rows affected (0.017 sec)
+
