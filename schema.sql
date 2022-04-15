@@ -155,5 +155,4 @@ CREATE TABLE Borrows(
 );
 
 
-USE booksystem; 
 SHOW tables;
