@@ -822,3 +822,441 @@ Records: 10  Duplicates: 0  Warnings: 0
 
 MariaDB [booksystem]> Ctrl-C -- exit!
 Aborted
+Query OK, 0 rows affected (1.92 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 20 rows affected (0.31 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
++------------+-----------------------------------------------------+-------+---------+
+| ISBN       | bookTitle                                           | pages | edition |
++------------+-----------------------------------------------------+-------+---------+
+|   60887966 | The Alchemist                                       |   192 | 1       |
+|  130158852 | Object-Oriented Programming in C++                  |   640 | 1       |
+|  140280197 | The 48 Laws of Power                                |   452 | 1       |
+|  142000671 | Of Mice and Men                                     |   103 | 1       |
+|  321430840 | HTML  XHTML  and CSS (Visual Quickstart Guide)      |   456 | 1       |
+|  330485385 | The Lovely Bones                                    |   328 | 1       |
+|  374525749 | The Odyssey                                         |   515 | 1       |
+|  385732546 | The Power of One                                    |   291 | 1       |
+|  439358078 | Harry Potter and the Order of the Phoenix           |   870 | 5       |
+|  439554896 | Harry Potter and the Chamber of Secrets             |   352 | 2       |
+|  439785960 | Harry Potter and the Half-Blood Prince              |   652 | 6       |
+|  451205367 | The Richest Man in Babylon                          |   194 | 1       |
+|  465067093 | The Psychology of Everyday Things                   |   257 | 1       |
+|  471743674 | The Warren Buffett Way                              |   245 | 1       |
+|  671708635 | The Seven Habits of Highly Effective People         |   368 | 1       |
+|  672326728 | PHP and MySQL Web Development                       |  1008 | 1       |
+|  763628107 | The Dragon's Eye                                    |   221 | 1       |
+|  802415318 | The 5 Love Languages - The 5 Love Languages Journal |   381 | 1       |
+| 1591164419 | Bleach  Volume 01                                   |   200 | 1       |
+| 1599869942 | My Inventions                                       |    88 | 1       |
++------------+-----------------------------------------------------+-------+---------+
+20 rows in set (0.03 sec)
+
++-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name   | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Book  |          0 | PRIMARY    |            1 | ISBN        | A         |           6 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| Book  |          1 | ISBN_INDEX |            1 | ISBN        | A         |           6 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++-------+------------+------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.62 sec)
+
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 28 rows affected (0.15 sec)
+Records: 28  Duplicates: 0  Warnings: 0
+
++----------+-------------+--------------+
+| authorId | authorFname | authorLname  |
++----------+-------------+--------------+
+|     1680 | Stephen R.  | Covey        |
+|     2429 | Paulo       | Coelho       |
+|     2430 | Alan R.     | Clarke       |
+|     2435 | James Noel  | Smith        |
+|     2657 | J.K.        | Rowling      |
+|     2968 | Bryce       | Courtenay    |
+|     3348 | Elizabeth   | Castro       |
+|     3450 | Nikola      | Tesla        |
+|     3493 | George S.   | Clason       |
+|     3597 | Homer       | n-a          |
+|     3600 | Robert      | Fitzgerald   |
+|     4523 | Gary        | Chapman      |
+|     5029 | Richard     | Johnsonbaugh |
+|     5031 | Martin      | Kalin        |
+|     5401 | Robert      | Greene       |
+|     5431 | Joost       | Elffers      |
+|     5456 | Luke        | Welling      |
+|     5457 | Laura       | Thomason     |
+|     5643 | D.S         | Carne-Ross   |
+|     6971 | Donald A.   | Norman       |
+|     7154 | Alice       | Sebold       |
+|     7268 | Robert G.   | Hagstrom     |
+|     7271 | Bill        | Miller       |
+|     7275 | Kenneth L.  | Fisher       |
+|     7627 | Dugald A.   | Steer        |
+|     7631 | Douglas     | Carrel       |
+|     7637 | John        | Steinbeck    |
+|     7985 | Tite        | Kubo         |
++----------+-------------+--------------+
+28 rows in set (0.01 sec)
+
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table  | Non_unique | Key_name        | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Author |          0 | PRIMARY         |            1 | authorId    | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| Author |          1 | AUTHOR_ID_INDEX |            1 | authorId    | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.22 sec)
+
+Query OK, 20 rows affected (0.22 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
++-----------+-----------------------------------------------+----------------+
+| libraryId | libraryName                                   | city           |
++-----------+-----------------------------------------------+----------------+
+|         1 | ANCHOR POINT PUBLIC LIBRARY                   | ANCHOR POINT   |
+|         2 | ANCHORAGE PUBLIC LIBRARY                      | ANCHORAGE      |
+|         3 | ANDERSON VILLAGE LIBRARY                      | ANDERSON       |
+|         4 | KUSKOKWIM CONSORTIUM LIBRARY                  | BETHEL         |
+|         5 | BIG LAKE PUBLIC LIBRARY                       | BIG LAKE       |
+|         6 | CANTWELL COMMUNITY LIBRARY                    | CANTWELL       |
+|         7 | CHINIAK PUBLIC LIBRARY                        | CHINIAK        |
+|         8 | COLD BAY PUBLIC LIBRARY                       | COLD BAY       |
+|         9 | COOPER LANDING COMMUNITY LIBRARY              | COOPER LANDING |
+|        10 | CORDOVA PUBLIC LIBRARY                        | CORDOVA        |
+|        11 | CRAIG PUBLIC LIBRARY                          | CRAIG          |
+|        12 | IPNATCHIAQ LIBRARY                            | DEERING        |
+|        13 | DELTA COMMUNITY LIBRARY                       | DELTA JUNCTION |
+|        14 | DILLINGHAM PUBLIC LIBRARY                     | DILLINGHAM     |
+|        15 | EAGLE PUBLIC LIBRARY                          | EAGLE          |
+|        16 | FAIRBANKS NORTH STAR BOROUGH PUBLIC LIBRARIES | FAIRBANKS      |
+|        17 | CHARLES EVANS COMMUNITY-SCHOOL LIBRARY        | GALENA         |
+|        18 | COPPER VALLEY COMMUNITY LIBRARY               | GLENNALLEN     |
+|        19 | GUSTAVUS PUBLIC LIBRARY                       | GUSTAVUS       |
+|        20 | HAINES BOROUGH PUBLIC LIBRARY                 | HAINES         |
++-----------+-----------------------------------------------+----------------+
+20 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.26 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++----------+-------------+-------------+-----------------------------+
+| memberId | memberFname | memberLname | email                       |
++----------+-------------+-------------+-----------------------------+
+|   220806 | Myles       | Mendez      | myles_menz@gmail.com        |
+|   292665 | Regina      | Cisneros    | reginnarCiseros@outlook.com |
+|   442411 | Virginia    | Holmes      | Holmes1998@gmail.com        |
+|   490213 | Vivian      | Graham      | vivianGraham_13@hotmail.com |
+|   756407 | Jaelyn      | Ross        | jaelyn_ros@gmail.com        |
+|   914064 | Davin       | Lam         | Davin_lam52@gmail.com       |
+|   915201 | Harry       | Hodge       | harry_H@outlook.com         |
+|   920467 | Jonas       | Sawyer      | jonas_saw@hotmail.com       |
+|   933082 | Elyse       | Kane        | elyse2Kane@gmail.com        |
+|   971968 | Maritza     | Gill        | maritza0Gill@gmail.com      |
++----------+-------------+-------------+-----------------------------+
+10 rows in set (0.00 sec)
+
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table  | Non_unique | Key_name        | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Member |          0 | PRIMARY         |            1 | memberId    | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| Member |          1 | MEMBER_ID_INDEX |            1 | memberId    | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++--------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.20 sec)
+
+Query OK, 0 rows affected (0.88 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 18 rows affected (0.12 sec)
+Records: 18  Duplicates: 0  Warnings: 0
+
++-------------+-----------------------------------+---------------+---------+
+| publisherId | publisherName                     | city          | country |
++-------------+-----------------------------------+---------------+---------+
+|         101 | Scholastic Inc.                   | New York      | USA     |
+|         104 | Delacorte Books for Young Readers | New Jersey    | USA     |
+|         105 | Moody Publishers                  | Chicago       | USA     |
+|         106 | SAMS Publishing                   | Indianapolis  | USA     |
+|         107 | Picador                           | New York      | USA     |
+|         108 | Filiquarian Publishing LLC.       | Minneapolis   | USA     |
+|         109 | Peachpit Press                    | Berkeley      | USA     |
+|         110 | Basic Books                       | New York      | USA     |
+|         111 | HarperOne                         | San Francisco | USA     |
+|         112 | Penguin Books                     | London        | England |
+|         113 | Berkley Books                     | New York      | USA     |
+|         114 | John Wiley & Sons                 | New York      | USA     |
+|         115 | Penguin (Business)                | London        | England |
+|         116 | Farrar  Straus and Giroux         | New York      | USA     |
+|         117 | Prentice Hall                     | Wilmington    | USA     |
+|         118 | Free Press                        | Detroit       | USA     |
+|         119 | VIZ Media LLC                     | San Francisco | USA     |
+|         120 | Candlewick Press                  | Somerville    | USA     |
++-------------+-----------------------------------+---------------+---------+
+18 rows in set (0.00 sec)
+
++-----------+------------+--------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table     | Non_unique | Key_name           | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-----------+------------+--------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Publisher |          0 | PRIMARY            |            1 | publisherId | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| Publisher |          1 | PUBLISHER_ID_INDEX |            1 | publisherId | A         |           1 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++-----------+------------+--------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+2 rows in set (0.15 sec)
+
+Query OK, 10 rows affected (0.13 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++----------+------------+
+| memberId | phone      |
++----------+------------+
+|   220806 | 8765588649 |
+|   292665 | 8765012944 |
+|   442411 | 8769614767 |
+|   490213 | 8762713126 |
+|   756407 | 8764245997 |
+|   914064 | 8769187544 |
+|   915201 | 8762631068 |
+|   920467 | 8761990166 |
+|   933082 | 8767881668 |
+|   971968 | 8761147653 |
++----------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 30 rows affected (0.13 sec)
+Records: 30  Duplicates: 0  Warnings: 0
+
++------------+----------+
+| ISBN       | authorId |
++------------+----------+
+|  671708635 |     1680 |
+|   60887966 |     2429 |
+|   60887966 |     2430 |
+|   60887966 |     2435 |
+|  439358078 |     2657 |
+|  439554896 |     2657 |
+|  439785960 |     2657 |
+|  385732546 |     2968 |
+|  321430840 |     3348 |
+| 1599869942 |     3450 |
+|  451205367 |     3493 |
+|  374525749 |     3597 |
+|  374525749 |     3600 |
+|  802415318 |     4523 |
+|  130158852 |     5029 |
+|  130158852 |     5031 |
+|  140280197 |     5401 |
+|  140280197 |     5431 |
+|  672326728 |     5456 |
+|  672326728 |     5457 |
+|  374525749 |     5643 |
+|  465067093 |     6971 |
+|  330485385 |     7154 |
+|  471743674 |     7268 |
+|  471743674 |     7271 |
+|  471743674 |     7275 |
+|  763628107 |     7627 |
+|  763628107 |     7631 |
+|  142000671 |     7637 |
+| 1591164419 |     7985 |
++------------+----------+
+30 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.11 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++------------+
+| ISBN       |
++------------+
+|   60887966 |
+|  142000671 |
+|  330485385 |
+|  374525749 |
+|  385732546 |
+|  439358078 |
+|  439554896 |
+|  439785960 |
+|  763628107 |
+| 1591164419 |
++------------+
+10 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.12 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++------------+
+| ISBN       |
++------------+
+|  130158852 |
+|  140280197 |
+|  321430840 |
+|  451205367 |
+|  465067093 |
+|  471743674 |
+|  671708635 |
+|  672326728 |
+|  802415318 |
+| 1599869942 |
++------------+
+10 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.13 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++-----------------------+------------+
+| fictionGenre          | ISBN       |
++-----------------------+------------+
+| Fantasy               |   60887966 |
+| Drama                 |  142000671 |
+| Supernatural thriller |  330485385 |
+| Epic poetry           |  374525749 |
+| Sports                |  385732546 |
+| Fantasy               |  439358078 |
+| Fantasy               |  439554896 |
+| Fantasy               |  439785960 |
+| Crime Fiction         |  763628107 |
+| Shonen                | 1591164419 |
++-----------------------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.09 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++------------------------+------------+
+| nonFictionGenre        | ISBN       |
++------------------------+------------+
+| Education              |  130158852 |
+| Psychology             |  140280197 |
+| Education              |  321430840 |
+| Business               |  451205367 |
+| Psychology             |  465067093 |
+| Business               |  471743674 |
+| Self-help              |  671708635 |
+| Education              |  672326728 |
+| Family & Relationships |  802415318 |
+| Autobiographies        | 1599869942 |
++------------------------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.10 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++----------+------------+------------+--------+--------------------+
+| memberId | fineNumber | fineDate   | amount | breach             |
++----------+------------+------------+--------+--------------------+
+|   971968 |        107 | 2022-02-02 |   6.00 | Missed Return Date |
+|   292665 |        253 | 2022-02-06 |  12.00 | Missed Return Date |
+|   914064 |        354 | 2022-02-28 |  19.00 | Damagaed Book      |
+|   756407 |        363 | 2022-02-25 |  21.00 | Badly Damaged Book |
+|   933082 |        536 | 2022-02-22 |  30.00 | Badly Damaged Book |
+|   220806 |        665 | 2022-02-13 |  29.00 | Badly Damaged Book |
+|   915201 |        678 | 2022-02-17 |   9.00 | Missed Return Date |
+|   442411 |        706 | 2022-02-04 |  30.00 | Badly Damaged Book |
+|   220806 |        751 | 2022-02-18 |   5.00 | Missed Return Date |
+|   490213 |        841 | 2022-02-23 |  25.00 | Badly Damaged Book |
++----------+------------+------------+--------+--------------------+
+10 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.09 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++----------+-----------+------------+------------+
+| memberId | libraryId | joinDate   | expireDate |
++----------+-----------+------------+------------+
+|   220806 |         1 | 2016-09-15 | NULL       |
+|   292665 |         6 | 2019-01-02 | NULL       |
+|   442411 |        10 | 2020-11-14 | NULL       |
+|   490213 |         8 | 2019-07-31 | NULL       |
+|   756407 |         2 | 2017-02-05 | NULL       |
+|   914064 |         7 | 2019-04-01 | NULL       |
+|   915201 |         4 | 2017-12-04 | NULL       |
+|   920467 |         3 | 2017-08-28 | NULL       |
+|   933082 |         5 | 2018-01-17 | NULL       |
+|   971968 |         9 | 2019-11-05 | NULL       |
++----------+-----------+------------+------------+
+10 rows in set (0.00 sec)
+
+Query OK, 20 rows affected (0.11 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
++-----------+------------+--------------+--------+
+| libraryId | ISBN       | dateAcquired | copies |
++-----------+------------+--------------+--------+
+|         1 |  439358078 | 2014-04-22   |     26 |
+|         2 |  465067093 | 2014-04-28   |     27 |
+|         3 |  439358078 | 2014-10-27   |     26 |
+|         4 |  763628107 | 2014-11-20   |     29 |
+|         5 |  465067093 | 2015-02-28   |     26 |
+|         6 | 1599869942 | 2015-03-08   |     12 |
+|         7 |  439358078 | 2016-01-10   |     14 |
+|         8 |  471743674 | 2016-02-13   |     16 |
+|         9 |  439358078 | 2016-02-23   |     18 |
+|        10 |  465067093 | 2016-05-25   |     20 |
+|        11 | 1599869942 | 2016-05-28   |     22 |
+|        12 |  439358078 | 2016-12-08   |     21 |
+|        13 |  465067093 | 2017-02-20   |     24 |
+|        14 | 1599869942 | 2017-07-05   |     29 |
+|        15 |  439358078 | 2017-07-26   |     30 |
+|        16 |  471743674 | 2017-09-23   |     11 |
+|        17 | 1599869942 | 2017-11-05   |     17 |
+|        18 |  439358078 | 2017-12-24   |     23 |
+|        19 |  471743674 | 2018-08-05   |     17 |
+|        20 |  465067093 | 2018-12-26   |     15 |
++-----------+------------+--------------+--------+
+20 rows in set (0.00 sec)
+
+Query OK, 20 rows affected (0.12 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
++-------------+------------+-----------------+
+| publisherId | ISBN       | publicationDate |
++-------------+------------+-----------------+
+|         101 |  439358078 | 2004-09-01      |
+|         101 |  439554896 | 2003-11-01      |
+|         101 |  439785960 | 2006-09-16      |
+|         104 |  385732546 | 2005-09-13      |
+|         105 |  802415318 | 2005-01-01      |
+|         106 |  672326728 | 2004-10-01      |
+|         107 |  330485385 | 2003-06-01      |
+|         108 | 1599869942 | 2006-05-17      |
+|         109 |  321430840 | 2006-08-01      |
+|         110 |  465067093 | 2006-06-13      |
+|         111 |   60887966 | 2006-05-02      |
+|         112 |  142000671 | 2002-01-08      |
+|         113 |  451205367 | 2008-02-01      |
+|         114 |  471743674 | 2005-10-01      |
+|         115 |  140280197 | 2000-09-01      |
+|         116 |  374525749 | 1998-11-05      |
+|         117 |  130158852 | 1999-08-13      |
+|         118 |  671708635 | 1990-09-15      |
+|         119 | 1591164419 | 2004-05-19      |
+|         120 |  763628107 | 2006-11-14      |
++-------------+------------+-----------------+
+20 rows in set (0.00 sec)
+
+Query OK, 10 rows affected (0.13 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
++----------+------------+------------+------------+
+| memberId | ISBN       | loanDate   | returnDate |
++----------+------------+------------+------------+
+|   220806 | 1591164419 | 2022-03-18 | 2022-04-25 |
+|   292665 |  671708635 | 2022-03-16 | 2022-04-21 |
+|   442411 |  451205367 | 2022-03-08 | 2022-04-14 |
+|   490213 |  374525749 | 2022-03-21 | 2022-04-27 |
+|   756407 |  130158852 | 2022-03-07 | 2022-04-11 |
+|   914064 |   60887966 | 2022-03-30 | 2022-05-12 |
+|   915201 |  330485385 | 2022-03-24 | 2022-05-05 |
+|   920467 |  763628107 | 2022-03-11 | 2022-04-20 |
+|   933082 |  465067093 | 2022-03-10 | 2022-04-15 |
+|   971968 | 1591164419 | 2022-03-25 | 2022-05-10 |
++----------+------------+------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> drop database booksystem;
+Query OK, 16 rows affected (4.25 sec)
+
+mysql> quit
