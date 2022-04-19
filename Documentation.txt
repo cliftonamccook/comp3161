@@ -1,0 +1,33 @@
+OVERVIEW OF PROBLEM BEING SOLVED BY THE DATABASE
+
+    The Ministry of Education is tasked with lending books out of its libraries. Currently, the data for those who are on this 
+    lending programme are small, but overtime, we expect it gain traction. As such, we are being proactive in designing a database 
+    that can also help them to maintain the programme. This will aid the organisation in keeping track of 
+    
+    i)Books and their information
+    ii) the borrowers of said books
+    iii) fines associated with each account
+    iv) list of members
+
+
+
+
+TECHNICAL CHALLENGES
+    There was no technological difficulty in creating this database.
+
+
+
+
+
+IMPLEMENTATION OF DATABASE
+    1. Data Security
+        This database is currently no security system in place for this database.
+        In the future,We advocate using Role-Based Access Control (RBAC) which provides a role to each user.
+        user. This is the greatest option since it requires the system to retain a level of hieriarchy. We don't want 
+        an Entry Clerk Level I, for example, to be allowed to modify Publishers' table. 
+        We also encourage end users to limit the number of perople who have access to this database.
+        Any member, publisher, author or borrower will not be harmed by the information gathered.
+
+
+   
+
