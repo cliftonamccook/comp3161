@@ -1,4 +1,4 @@
-tee loaddata.log
+-- tee loaddata.log
 
 CREATE INDEX ISBN_INDEX ON Book(ISBN);
 INSERT INTO Book(ISBN, bookTitle, pages, edition)
