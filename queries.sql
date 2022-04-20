@@ -78,14 +78,15 @@ DELETE FROM Fine where amount < 15;
 -- # PROCEDURE
 
 -- Get all members who have a fine
-delimiter //
-CREATE OR REPLACE PROCEDURE getAllMembersWhoHasAFine()
+DELIMITER //
+CREATE PROCEDURE getAllMembersWhoHasAFine()
 BEGIN
   SELECT m.memberFname, m.memberLname, m.email, f.breach, f.amount FROM Fine as f
   INNER JOIN Member as m
     ON m.memberId = f.memberId;
 END //
+DELIMITER ;
 
-call getAllMembersWhoHasAFine();
+CALL getAllMembersWhoHasAFine()
 
 -- # END Procedure --
