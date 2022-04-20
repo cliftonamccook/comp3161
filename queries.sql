@@ -14,7 +14,7 @@ WHERE Year(publishes.publicationDate) > 2005;
 
 SELECT * FROM books_published_after_2005;
 
--- The ministry wants to which book was acquired the most and for which libary 
+-- The ministry wants to know which book was acquired the most and for which library 
 CREATE OR REPLACE VIEW book_acquired_the_most
 AS SELECT l.libraryId, l.libraryName, l.city, b.bookTitle, b.ISBN FROM Owns as o
 LEFT JOIN Library as l 
@@ -56,7 +56,7 @@ INNER JOIN Library AS l ON l.libraryId = o.libraryId
 SET o.dateAcquired = '2018-10-1'
 WHERE l.libraryName = "HAINES BOROUGH PUBLIC LIBRARY" AND o.ISBN = 465067093;
 
--- All libraries are having a book drive and are donating 10 Fantasy books to local school, only if the library has more than 
+-- All libraries are having a book drive and are donating 10 Fantasy books to a local school, only if the library has more than 
 -- 10 Fantasy books in stock 
 UPDATE Fiction_fictionGenre AS f
 LEFT JOIN Owns AS o 
